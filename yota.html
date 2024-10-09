@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pannellum Two Scene Navigation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+/* 
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("announce.png");
+  min-height: 75%;
+} */
+
+.menu {
+  display: none;
+}
+
+#abt
+{
+  margin-right: 743px;
+}
+
+#yoda
+{
+  margin-right: 0px;
+}
+
+#about {
+  margin-top: -100px;
+}
+
+/* Panorama container style */
+#panorama {
+            width: 100vw;
+            height: 85vh;
+            margin-top: 50px;
+        }
+</style>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <!-- <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div> -->
+    <div class="w3-col s3" id="abt">
+      <a href="about.html" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <!-- <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div> -->
+    <div class="w3-col s3" id="yoda">
+      <a href="cafe.html" class="w3-button w3-block w3-black">&#x21D2;โรงอาหารคณะวิศวกรรมศาสตร์</a>
+    </div>
+  </div>
+</div>
+
+<div id="panorama"></div>
+
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "civil",  // Set the first scene to load
+                "autoLoad": true
+            },
+            "scenes": {
+                "civil": {
+                    "panorama": "civil.jpg",  // Path to first panorama image
+                    "hotSpots": [
+                        {
+                            "pitch": 0,  // Adjust vertical angle for hotspot position
+                            "yaw": 135,    // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": "ด้านใน",  // Label for the hotspot
+                            "sceneId": "inside"  // ID of the scene to navigate to
+                        },
+                        {
+                            "pitch": 0,  // Adjust vertical angle for hotspot position
+                            "yaw": 225,    // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": "ด้านใน",  // Label for the hotspot
+                            "sceneId": "inside"  // ID of the scene to navigate to
+                        },
+                        {
+                            "pitch": 5,  // Adjust vertical angle for hotspot position
+                            "yaw": 335,    // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": " ",  // Label for the hotspot
+                            "sceneId": "1st_left"  // ID of the scene to navigate to
+                        }
+                    ]
+                },
+                "inside": {
+                    "panorama": "1st_mid.jpg",  // Path to second panorama image
+                    "hotSpots": [
+                        {
+                            "pitch": 0,  // Adjust vertical angle for hotspot position
+                            "yaw": 290,   // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": "ด้านหลัง",  // Label for the hotspot
+                            "sceneId": "civil"  // ID of the scene to navigate to
+                        },
+                        {
+                            "pitch": 0,  // Adjust vertical angle for hotspot position
+                            "yaw": 215,   // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": "ด้านหลัง",  // Label for the hotspot
+                            "sceneId": "civil"  // ID of the scene to navigate to
+                        },
+                        {
+                            "pitch": 10,  // Adjust vertical angle for hotspot position
+                            "yaw": 160,   // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": "ชั้นบน",  // Label for the hotspot
+                            "sceneId": "2nd_mid"  // ID of the scene to navigate to
+                        },
+                        {
+                            "pitch": 0,  // Adjust vertical angle for hotspot position
+                            "yaw": 70,   // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": "ด้านหน้า",  // Label for the hotspot
+                            "sceneId": "front"  // ID of the scene to navigate to
+                        }
+                        
+                    ]
+                },
+                "1st_left": {
+                    "panorama": "1st_BL.jpg",  // Path to second panorama image
+                    "hotSpots": [
+                        {
+                            "pitch": 0,  // Adjust vertical angle for hotspot position
+                            "yaw": 165,   // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": "ชั้นบน",  // Label for the hotspot
+                            "sceneId": "civil"  // ID of the scene to navigate to
+                        }
+                    ]
+                },
+                "2nd_mid": {
+                    "panorama": "2nd_mid.jpg",  // Path to second panorama image
+                    "hotSpots": [
+                        {
+                            "pitch": -3,  // Adjust vertical angle for hotspot position
+                            "yaw": 180,   // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": " ",  // Label for the hotspot
+                            "sceneId": "2nd_L"  // ID of the scene to navigate to
+                        },
+                        {
+                            "pitch": 0,  // Adjust vertical angle for hotspot position
+                            "yaw": 0,   // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": " ",  // Label for the hotspot
+                            "sceneId": "2nd_R"  // ID of the scene to navigate to
+                        },
+                        {
+                            "pitch": -15,  // Adjust vertical angle for hotspot position
+                            "yaw": 275,   // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": "ด้านล่าง",  // Label for the hotspot
+                            "sceneId": "inside"  // ID of the scene to navigate to
+                        }
+                    ]
+                },
+                "front": {
+                    "panorama": "Front.jpg",  // Path to second panorama image
+                    "hotSpots": [
+                        {
+                            "pitch": 0,  // Adjust vertical angle for hotspot position
+                            "yaw": 125,   // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": " ",  // Label for the hotspot
+                            "sceneId": "1st_R"  // ID of the scene to navigate to
+                        },
+                        {
+                            "pitch": 7,  // Adjust vertical angle for hotspot position
+                            "yaw": 285,   // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": "ด้านใน",  // Label for the hotspot
+                            "sceneId": "inside"  // ID of the scene to navigate to
+                        }
+                    ]
+                },
+                "1st_R": {
+                    "panorama": "1st_R.jpg",  // Path to second panorama image
+                    "hotSpots": [
+                        {
+                            "pitch": 0,  // Adjust vertical angle for hotspot position
+                            "yaw": 30,   // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": " ",  // Label for the hotspot
+                            "sceneId": "front"  // ID of the scene to navigate to
+                        }
+                    ]
+                },
+                "2nd_R": {
+                    "panorama": "2nd_R.jpg",  // Path to second panorama image
+                    "hotSpots": [
+                        {
+                            "pitch": -2,  // Adjust vertical angle for hotspot position
+                            "yaw": 202,   // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": "ด้านใน",  // Label for the hotspot
+                            "sceneId": "2nd_mid"  // ID of the scene to navigate to
+                        }
+                    ]
+                },
+                "2nd_L": {
+                    "panorama": "2nd_L.jpg",  // Path to second panorama image
+                    "hotSpots": [
+                        {
+                            "pitch": -1,  // Adjust vertical angle for hotspot position
+                            "yaw": 133,   // Adjust horizontal angle for hotspot position
+                            "type": "scene",
+                            "text": "ด้านใน",  // Label for the hotspot
+                            "sceneId": "2nd_mid"  // ID of the scene to navigate to
+                        }
+                    ]
+                }
+                
+            }
+        });
+    </script>
+
+<!-- Header with image -->
+<!-- <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Open from 6am to 5pm</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">the<br>Cafe</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">15 Adr street, 5015</span>
+  </div>
+</header> -->
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Civil Engineer</span></h5>
+      <!-- <p>มื่อวันที่ 16 กันยายน 2563 คณะวิศวกรรมศาสตร์ ได้มีการประชุมคณะกรรมการเพื่อเตรียมสร้าง โรงอาหารคณะวิศวกรรมศาสตร์ใหม่ ภายใต้ชื่อว่า “Innovation Complex” โดยโรงอาหารแห่งนี้จะใช้ประโยชน์ เป็นศูนย์อาหารของคณะวิศวกรรมศาสตร์ Co-working space สำหรับนักศึกษา และห้องกิจกรรมของชุมนุมนักศึกษา</p> -->
+      <!-- <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p> -->
+      <!-- <div class="w3-panel w3-leftbar w3-light-grey">
+        <p><i>มื่อวันที่ 16 กันยายน 2563 คณะวิศวกรรมศาสตร์ ได้มีการประชุมคณะกรรมการเพื่อเตรียมสร้าง โรงอาหารคณะวิศวกรรมศาสตร์ใหม่ ภายใต้ชื่อว่า “Innovation Complex” โดยโรงอาหารแห่งนี้จะใช้ประโยชน์ เป็นศูนย์อาหารของคณะวิศวกรรมศาสตร์ Co-working space สำหรับนักศึกษา และห้องกิจกรรมของชุมนุมนักศึกษา</i></p> -->
+        <!-- <p>Chef, Coffeeist and Owner: Liam Brown</p> -->
+      <!-- </div> -->
+      <!-- <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top"> -->
+      <!-- <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p> -->
+      <!-- <p><strong>Address:</strong> 15 Adr street, 5015, NY</p> -->
+    </div>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>จัดทำโดย <a href="about.html" title="นักศึกษาปี 1" target="_blank" class="w3-hover-text-green">นักศึกษาปี 1</a> คณะวิศวกรรมศาสตร์ สาขาคอมพิวเตอร์</p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
